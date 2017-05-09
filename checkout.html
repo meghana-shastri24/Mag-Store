@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <link href="Resources\CSS\checkout.css" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<title>MAG STORE</title>
+
+</head>
+<body>
+
+<header>
+
+		<div class = "nav-bar">
+		<div class="logo-container">
+		<img class="logo" src="Resources\Images\TI.png" alt="LOGO">
+		</div>
+		<div class="cart-container">
+		<button class="btn cart-button"  type="button" data-toggle="modal" data-target="#myModal">
+		<i class="material-icons scart">shopping_cart</i>
+		<span class="badge" id = "bcount"style="background-color: white; color: #4a148c"></span>
+		</button>
+		</div>
+		</div>
+</header>
+
+<div class="container">
+
+<p id="shopping"><strong> My Shopping Bag</strong></p>
+</div>
+<div id="image">
+	 <div class="container">
+		<div class="row">
+	 		<br>
+             
+					<div class="col-md-12">
+                        <div class="col-lg-7 col-md-8 col-sm-6 col-xs-12 col-md-pull-3 col-lg-pull-2" >
+ 		                   <!--SHIPPING METHOD-->
+                           <table class="table table-responsive table-borderless" id="table">
+    						<thead>
+                                <tr>
+        							<td><strong>Your Cart: # item</strong></td>
+        							<td style="padding-left: 25px"><strong>Title</strong></td>
+        							<td><strong>Price</strong> </td>
+        							<td><strong> Quantity</strong></td>
+        							<td><strong>Total Price</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody id="tbody">
+    						</tbody>
+    					</table> 
+                        </div>
+                <div class="col-lg-4 col-md-5 col-sm-9 col-xs-12 col-md-push-1 col-lg-push-1">
+<!--                     REVIEW ORDER
+ -->                    <div class="panel panel-default" id="panel">
+                        <div class="panel-heading text-center">
+                            <h4>Review Order</h4>
+                         </div>
+                         <div class="panel-body">
+                                 
+                                <div class="col-md-12" >
+                                    <strong>Subtotal</strong>
+                                    <div class="pull-right" id="subtotal"></div>
+                                </div>
+                                <hr>
+
+                                <div class="col-md-12">
+                                <button type="button" id="promobtn" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="promocode()">Enter Promo Code</button>
+                                <div id="promo"></div>
+                                <div id="discount"></div>
+                                </div>
+                         </div> 
+                                
+                         <button type="button" onclick="finish()" id="checkout" class="btn btn-primary btn-lg btn-block">Finish Shopping</button>
+                                
+                        </div>
+					</div>
+					</div>
+					</div>
+				</div>
+				</div>
+
+
+  
+	<script src="Resources\JS\checkout.js"> </script>
+
+
+	
+</body>
+

@@ -10,29 +10,46 @@ body {
 		opacity: 0.9;
 		display: flex;
 		position: fixed;
-		z-index:1;
+		z-index:999;
 
 
 	}
 	.logo-container, .cart-container{
 		width:50%;
+		padding: 0px;
 	}
 	.logo {
-		height:50px;
+		height:60px;
 		width:190px;
-		padding :5px 0px;
+		padding :10px 0px;
 		
 	}
 	
 	.scart {
 		font-size: 28px;
 		color: white;
-		float: right;
-		padding: 15px 10px;
+		padding: 10px 0px;
+
 		
 
 	}
 	
+	.badge
+	{
+		
+		float: right;
+		margin: 15px 5px;
+		background-color: white;
+		color:#4a148c;
+
+	}
+
+	.cart-button{
+		float: right;
+		background-color: transparent;
+		padding: 0px 0px;
+	}
+
 	#banner-name {
 		font-size: 80px;
 		font-weight: 500;
@@ -122,17 +139,49 @@ body {
    		height: 300px;
    	}
 
-  
-   .card button.btn{
+  		
+   .add-option{
    		width:100%;
    		background-color: #4a148c;
    		border-color: #4a148c;
+   		color: white;
+   	}
+
+   	.add-option:hover{
+   		background-color: transparent;
+   		border-color: #4a148c;
+   	}
+   	.add-option .btn:hover{
+   		color: #4a148c;
+   		font-weight: 700;
+   	}
+   	#add-cart-btn{
+   		color: white;
+   		   		background-color: #4a148c;
+   		   		width: 100%;
+
+
    	}
    	.price
    	{
-   		padding:10px 25%;
+   		text-align: center;
+   		padding: 10px 0px;
    	}
    	
+   	#ptitle{
+   		font-weight: 600;
+   		font-size: 18px;
+   	}
+   	#pprice{
+		font-weight: 600;
+   		font-size: 14px; 
+   		 }
+   	
+   	#options{
+font-weight: 600;
+   		font-size: 14px;
+
+   		 }
    	.card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    	}
@@ -173,4 +222,70 @@ body {
 {
 	color: white;
 	margin-bottom: 0px;
+}
+
+
+.cart-image{
+	display: inline;
+	height: 100px;
+	width: 100px;
+	padding: 20px;
+	border-radius: 5px;
+
+}
+.mtitle, .mprice, .mquant, .mtotalPrice{
+font-style: bold;
+display: inline-block;
+padding: 15px;
+width: 15%;
+text-align: center;
+}
+
+.remove-btn{
+	float: right;
+	font-style: bold;
+display: inline-block;
+padding: 30px 20px;
+
+}
+.modal-title{
+	font-size: 26px;
+	color: floralwhite;
+	font-weight: 700;
+    font-family: cursive;
+}
+
+.modal-header{
+	background-color: mediumorchid;
+}
+#grand-total{
+	padding-top: 7px;
+    color: floralwhite;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: large;
+}
+
+.modal-footer{
+	background-color: mediumorchid;
+}
+
+#close{
+	opacity: .5;
+	    margin-top: 10px;
+
+}
+
+.modal-body {
+	background-color: ivory;
+}
+
+
+
+#Proceed{
+	border-radius: 30px;
+	border-color: black;
+	font-weight: 600;
+	font-size: large;
 }

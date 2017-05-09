@@ -21,25 +21,56 @@
 <title>MAG STORE</title>
 
 </head>
-<body>
+<body onload="selecttab('trending')">
 
 	<header>
+
 		<div class = "nav-bar">
 		<div class="logo-container">
 		<img class="logo" src="Resources\Images\TI.png" alt="LOGO">
 		</div>
 		<div class="cart-container">
-		 		
-		<a href="#"><i class="material-icons scart">shopping_cart</i></a>
+		<button class="btn cart-button"  type="button" data-toggle="modal" data-target="#myModal">
+		<i class="material-icons scart">shopping_cart</i>
+		<span class="badge" id = "bcount"style="background-color: white; color: #4a148c"></span>
+		</button>
 		</div>
 		</div>
-	</header>
-
+		</header>
+		<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" id="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Your Order</h4>
+        </div>
+        <div class="modal-body">
+          <p id="modal-content">
+          	<!-- Name : <strong id="mname"></strong><br>
+          	Price : <strong id="mprice"></strong><br>
+          	Quantity : <strong id="mquantity"></strong><br>
+          	Total Price : <strong id="mtotalPrice"></strong> -->
+          </p>
+        </div>
+        <div class="modal-footer">
+        	<div class= "pull-left" id="grand-total"></div>
+          <button type="button" id="Proceed"class="btn btn-default pull-right" data-dismiss="modal" onclick="Proceed()">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+		
+	
 	 <section >
+	 
 		<div class="banner">
 			<img id="bann"src = "Resources\Images\bann.png" alt="TimeInc-Brands">
 			<p id="banner-name">MAG STORE</p>
 		</div>
+		
 	</section>
 
 	<section >
@@ -47,10 +78,10 @@
 
 		<div class="tabs">
 		<ul>
-		<li onclick="selecttab('tab1')"><a class="tabbutton" >Trending</a></li>
-		<li onclick="selecttab('tab2')"><a class="tabbutton" >Entertainment</a></li>
-		<li onclick="selecttab('tab3')"><a class="tabbutton">Travel</a></li>
-		<li onclick="selecttab('tab4')"><a class="tabbutton">Food</a></li>
+		<li onclick="selecttab('trending')"><a class="tabbutton" >Trending</a></li>
+		<li onclick="selecttab('entertainment')"><a class="tabbutton" >Entertainment</a></li>
+		<li onclick="selecttab('travel')"><a class="tabbutton">Travel</a></li>
+		<li onclick="selecttab('food')"><a class="tabbutton">Food</a></li>
 		</ul>
 		</div>
 		</div>
@@ -61,184 +92,39 @@
 		<div class="container tab-container">
 
 			<!-- Tab 1 Content -->
-		<div id="tab1" class="tabContent ">
-		<div class="row">
+		<div id="trending" class="tabContent ">
+			<!-- <div class="row"> -->
 		
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Cooking.jpg" alt="Cooking">
-		<p class="price"> <strong>Cooking Light</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
+				<!-- <div class="col-lg-3 col-md-4 col-sm-6 card-container">
+					<div class="card">
+						<img class="image-container" src = "Resources\Images\Cooking.jpg" alt="Cooking">
+							<p class="price"> <strong id="img-name">Cooking Light</strong><br>
+							Price : $ <strong id="img-price">10 </strong>
+							<strong>Quantity</strong><input type="number" name="Quantity" id="Quantity" min="1" max="10">
+							</p>
+						<button type="button" class="btn btn-primary add-option" onclick="badgecount(document.getElementById('Quantity').value, document.getElementById('img-name').innerHTML, document.getElementById('img-price').innerHTML)">Add To Cart</button>		
+					</div> -->
+				<!-- </div> -->
 
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Entertainment.jpg" alt="Cooking">
-		<p class="price"> <strong>Entertainment</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Golf.jpg" alt="Cooking">
-		<p class="price"> <strong>Golf</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Sunset.jpg" alt="Cooking">
-		<p class="price"> <strong>Sunset</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\People.jpg" alt="Cooking">
-		<p class="price"> <strong>People</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Health.jpg" alt="Cooking">
-		<p class="price"> <strong>Health</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-		</div>
+				
 		</div>
 		<!-- End of Tab 1-->
 
 		<!-- Tab 2 Content -->
-		<div id="tab2" class="tabContent">
-		<div class="row">
-		
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Cooking.jpg" alt="Cooking">
-		<p class="price"> <strong>Cooking Light</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
+		<div id="entertainment" class="tabContent">
 
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\People.jpg" alt="Cooking">
-		<p class="price"> <strong>People</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Golf.jpg" alt="Cooking">
-		<p class="price"> <strong>Golf</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-		</div>
 	    </div>
 
 	    <!-- Tab 3 Content -->
-		<div id="tab3" class="tabContent">
-		<div class="row">
+		<div id="travel" class="tabContent">
 		
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Cooking.jpg" alt="Cooking">
-		<p class="price"> <strong>Cooking Light</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
+		
 		</div>
 
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Entertainment.jpg" alt="Cooking">
-		<p class="price"> <strong>Entertainment</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Golf.jpg" alt="Cooking">
-		<p class="price"> <strong>Golf</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-		</div>
-		</div>
 
 		<!-- Tab4 Content -->
-		<div id="tab4" class="tabContent">
-		<div class="row">
+		<div id="food" class="tabContent">
 		
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Cooking.jpg" alt="Cooking">
-		<p class="price"> <strong>Cooking Light</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-
-
-		<div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Entertainment.jpg" alt="Cooking">
-		<p class="price"> <strong>Cooking Light</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-
-
-		</div><div class="col-lg-3 col-md-4 col-sm-6 card-container">
-		<div class="card">
-		<img class="image-container" src = "Resources\Images\Health.jpg" alt="Cooking">
-		<p class="price"> <strong>Cooking Light</strong><br>
-		<strong>Price : $10 </strong>
-		</p>
-		<button type="button" class="btn btn-primary">Add To Cart</button>		
-		</div>
-		</div>
-		</div>
 		</div>
 		
 
@@ -258,27 +144,5 @@
 
 	</footer>
 
-	<script>
-
-	function selecttab( tabid)
-	{
-		var i,tabcontent, tabbutton;
-
-		console.log("Hiiii" + event, tabid)
-		tabcontent = document.getElementsByClassName('tabContent');
-		for(i = 0; i<tabcontent.length;i++)
-		{
-					
-			tabcontent[i].style.display = "none";
-		}
-
-		
-
-
-		document.getElementById(tabid).style.display='block';
-
-
-	}
-		
-	</script>
+	<script src="Resources\JS\json.js"> </script>
 </body>

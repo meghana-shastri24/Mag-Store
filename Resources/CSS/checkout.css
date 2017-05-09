@@ -1,0 +1,163 @@
+
+
+body {
+	margin: 0px;
+	}
+
+	.nav-bar {
+		background-color: #4a148c;
+		width: 100%;
+		margin: 0px;
+		opacity: 0.9;
+		display: flex;
+		position: fixed;
+		z-index:999;
+
+
+	}
+	.logo-container, .cart-container{
+		width:50%;
+		padding: 0px;
+	}
+	.logo {
+		height:60px;
+		width:190px;
+		padding :10px 0px;
+		
+	}
+	
+	.scart {
+		font-size: 28px;
+		color: white;
+		padding: 10px 10px;
+
+		
+
+	}
+	
+	.badge
+	{
+		
+		float: right;
+		margin: 15px 5px;
+		background-color: white;
+		color:#4a148c;
+
+	}
+	.cart-button{
+		float: right;
+		background-color: transparent;
+		padding: 0px 0px;
+
+	}
+	#shopping{
+		padding-top: 60px;
+		font-size: 30px;
+		text-align: center;
+		    font-family: cursive;
+    color: indigo;
+    text-shadow: 4px 4px 3px #ffcccd;
+}
+
+	.image-container{
+	height: 100px;
+	width: 100px;
+	padding: 10px;
+	border-radius: 50%;
+
+}
+.mtitle, .mprice, .mquant, .mtprice{
+display: inline-block;
+padding: 50px 10px;
+}
+
+
+
+.checkout{
+	padding: 20px;
+	margin-top: 40px;
+	margin-left: 20%;
+}
+
+#tbody{
+	border: 0px;
+}
+
+#promocode{
+	padding: 5px;
+    margin-left: 30%;
+    margin-top: 20px;
+    width: 50%;
+    border-radius: 5px;
+    border-color: darkorchid;
+}
+
+#promobtn{
+	margin-left: 30%;
+	background: black; 
+}
+#checkout{
+	background-color: #5c2c98;
+    border-color: #5c2c98;
+}
+
+#table{
+	margin: 0px 25%;
+}
+
+#discount{
+text-align: center;
+    font-size: 24px;
+    font-family: cursive;
+    color: red;
+    padding-top: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+
+	#table{
+		margin-left:0px;
+		padding-right: 20px;
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+
+	#myModal{
+		margin: 10% 20%;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px)
+{
+	#table{
+		margin-left: 40%;
+		margin-right: 0px;
+	}
+	
+
+	#myModal{
+		margin: 10% 25%;
+	}
+
+	#panel{
+				margin-left: 40%;
+
+	}
+}
+
+@media (min-width: 1024px)
+{
+	#table{
+	margin: 20px 35%;
+}
+
+#myModal{
+		
+		margin:10% 25%;
+
+	}
+
+}
+
+
