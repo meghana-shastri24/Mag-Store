@@ -116,7 +116,9 @@ var couponcode = coupon.value;
 
 if(couponcode == "awsome" )
 {
+
 	alert("Congrats you have availed 10% offer on your grand total");
+	// alert("Congrats you have availed 10% offer on your grand total");
 	grandtotal = grandtotal - (grandtotal * 10.0)/100.0;
 	
 }
@@ -171,12 +173,69 @@ console.log(grandtotal);
 	
 function finish(){
 
-	alert("Thank you for shopping with us.....:) Hope u enjoyed...:)");
-	window.location.href="index.html";
-	sessionStorage.clear();
+	var div2 = document.createElement('div');
+	div2.id = 'myModal1';
+	div2.className = 'modal fade';
+	div2.setAttribute("role", "dialog");     
+
+	var innerDiv = document.createElement('div');
+	innerDiv.className = 'modal-dialog modal-sm';
+	div2.appendChild(innerDiv);              
+
+	var innerDiv2 = document.createElement('div');
+	innerDiv2.className = 'modal-content';
+	innerDiv.appendChild(innerDiv2);
+
+	var innerDiv3m = document.createElement('div');
+	innerDiv3m.className = 'modal-header';
+	innerDiv3m.innerHTML = "<span style = 'color:white; font-size:large; font-style:italic;' >FINISH SHOPPING</style>";
+	innerDiv2.appendChild(innerDiv3m);
+
+	var button = document.createElement("button");
+	button.className = 'close';
+	button.setAttribute("data-dismiss", "modal");
+	button.setAttribute("aria-hidden", "true");
+	button.setAttribute("value", "No");
+	innerDiv3m.appendChild(button); 
+
+	
+	var header = document.createElement("H4");
+	header.className = 'modal-title';
+	innerDiv3m.appendChild(header);
+
+	var indiv =  document.createElement('div');
+	indiv.className = 'modal-body';
+	innerDiv2.appendChild(indiv);
+
+	var para1 =  document.createElement('p'); 
+	indiv.appendChild(para1);
+	para1.innerHTML = "Thank you for shopping with us.....:) Hope u enjoyed...:)";
+
+	var div =  document.createElement('div');
+	div.className = 'modal-footer';
+	innerDiv2.appendChild(div);
+
+	var closeBtn = document.createElement("input");
+	closeBtn.className = 'btn btn-default';
+	closeBtn.setAttribute("data-dismiss", "modal");
+	closeBtn.setAttribute("type", "button");
+	closeBtn.setAttribute("value", "Okay");
+	closeBtn.setAttribute("onclick", "Clear()");
+	div.appendChild(closeBtn);
+
+	
+
+	document.getElementById("shopping1").appendChild(div2);
+
+	// alert("Thank you for shopping with us.....:) Hope u enjoyed...:)");
+	
 
 }
 
+function Clear(){
+	window.location.href="index.html";
+	sessionStorage.clear();
+}
 
 for(var q=0; (q<=sessionStorage.getItem("count"))|| (q<sessionStorage.getItem("index"));q++)
 {

@@ -160,4 +160,33 @@ text-align: center;
 
 }
 
+#submit{
+	border-radius: 50%;
+}
 
+#myModal1 .modal-dialog{
+width: 400px;
+}
+
+#myModal1 .modal-header{
+	    text-align: center;
+    background: #795896;
+}
+
+#myModal1 .modal-body{
+	padding: 50px 30px;
+	font-size: 20px;
+}
+#myModal1 .modal-footer{
+	text-align: center;
+}
+
+#myModal1 .modal-footer input{
+	    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 0px;
+    border: 1px solid purple;
+    color: #fff;
+    font-weight: 600;
+    background: #795896;
+}
